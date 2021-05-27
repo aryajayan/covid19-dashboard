@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+@import "sass/variables";
+@import "sass/mixins";
+
+@font-face {
+  font-family: "Cop_normal";
+  src: url(assets/fonts/CooperHewitt-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: "Cop_thin";
+  src: url(assets/fonts/CooperHewitt-Thin.otf) format("opentype");
+}
+@font-face {
+  font-family: "Cop_bold";
+  src: url(assets/fonts/CooperHewitt-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Cop_light";
+  src: url(assets/fonts/CooperHewitt-Light.otf) format("opentype");
+}
+h1 {
+  font-family: "Cop_thin";
+  font-size: 8vw;
+  color: #3c3c3c;
+  font-weight: normal;
+  text-shadow: 0.02em 0.02em #ccc;
+}
+div {
+  box-sizing: border-box;
+}
+.wrapper,
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Cop_normal";
+}
+figure {
+  margin: 0;
+}
+.button_blue {
+  @include form-button($base-color, $secondary-color, $base-color);
+}
+.button_white {
+  @include form-button($color-light, $text-grey, $color-light);
+}
+.input_text {
+  border: 0;
+  background: none;
+  border-bottom: 2px solid #ccc;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: $text-size;
+  &:focus-visible {
+    outline: none;
+  }
+}
+.align-center {
+  text-align: center;
+}
+.contents {
+  width: 50%;
+}
+
+.error_text {
+  color: $error-color;
+  font-family: $base-font-family;
+  font-size: 0.9rem;
+}
+.border_line {
+  border-bottom: 0.1em solid #ccc;
+  flex-grow: 1;
+}
+.sub_header {
+  color: $text-grey;
+  font: 2.3vw regular, sans-serif;
+  margin: 0.5em 0.5em 0.5em 0;
+}

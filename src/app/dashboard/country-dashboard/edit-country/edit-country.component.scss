@@ -1,0 +1,60 @@
+@import "../../../../sass/mixins";
+@import "../../../../sass/variables";
+
+.form_section {
+  flex-grow: 1;
+  @include flex-box(column);
+}
+.form_data {
+  @include form-container;
+  @include form-box;
+  @include flex-box(row);
+  flex-wrap: wrap;
+}
+.input_group {
+  width: 45%;
+  margin: 0em 0 2em 0;
+}
+.input_text {
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  width: 92%;
+}
+
+form {
+  @include flex-box(column);
+}
+.buttons {
+  display: flex;
+  padding: 2em 0;
+  justify-content: flex-end;
+  button {
+    width: 14%;
+    margin-left: 1em;
+  }
+}
+@media screen and (max-width: 800px) {
+  .form_section {
+    padding: 0;
+  }
+  .form_data {
+    padding: 1em;
+    flex-direction: column;
+  }
+  .input_group {
+    width: 100%;
+    margin: 0em 0 0em 0;
+  }
+  .input_text {
+    margin: 0.5em 0;
+    width: 83%;
+  }
+  .buttons {
+    justify-content: space-between;
+    button {
+      width: 45%;
+      padding: 0.5em;
+      margin-left: 0em;
+    }
+  }
+}

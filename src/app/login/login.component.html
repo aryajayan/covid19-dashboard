@@ -1,0 +1,27 @@
+<section class="login_container">
+  <div class="banner_section contents">
+    <div class="quarter-circle-top-left"></div>
+    <h1>COVID - 19</h1>
+  </div>
+  <div class="form_section contents">
+    <form [formGroup]="loginForm"
+          role="form"
+          (ngSubmit)="onLogin()"
+          class="login_form">
+      <div class="login_section">
+        <input formControlName="username"
+               type="text"
+               class="input_text"
+               placeholder="username">
+        <input formControlName="password"
+               type="text"
+               class="input_text"
+               placeholder="password">
+        <span *ngIf="errorMessage"
+              class="error_text">{{errorMessage}}</span>
+        <button class="button_blue"
+                [disabled]="!loginForm.valid">Login</button>
+      </div>
+    </form>
+  </div>
+</section>

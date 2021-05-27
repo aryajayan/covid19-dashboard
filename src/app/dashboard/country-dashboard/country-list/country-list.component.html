@@ -1,0 +1,90 @@
+<div class="country_dashboard_container dashboard_content">
+  <header class="header_section"
+          [formGroup]="filterForm">
+    <h3 class="sub_header">Country</h3>
+    <div class="text_box_section">
+      <div class="inputContainer">
+        <i class="fa fa fa-search"
+           aria-hidden="true"></i>
+        <input type="text"
+               formControlName="searchText"
+               class="box_input search_input"
+               placeholder="Search Country">
+      </div>
+      <div class="inputContainer">
+        <select name=""
+                formControlName="sortBy"
+                class="box_input sort_select">
+          <option *ngFor="let opt of sortByList"
+                  [ngValue]="opt">{{opt}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="pagination_section">
+      <span class="page_count_span">{{startCount}} to {{filterMetadata.count>30 ? endDisplayCount:
+        filterMetadata.count}} of {{filterMetadata.count}}</span>
+      <div class="navigation_section">
+        <span (click)="previousClicked()">
+          <i [ngClass]="{'disabled_arrow': startCount==0}"
+             class="fa fa-chevron-circle-left"></i>
+        </span>
+        <span (click)="nextClicked()">
+          <i class="fa fa-chevron-circle-right"
+             [ngClass]="{'disabled_arrow': filterMetadata.count<30 || endDisplayCount==filterMetadata.count}"></i>
+        </span>
+      </div>
+    </div>
+  </header>
+  <section class="country_data_section"
+           #tileContainer>
+    <div class="spinner align-center"
+         *ngIf="countryList==null">
+      <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="tile_container"
+         *ngIf="countryList!==null">
+      <div class="card_content"
+           *ngFor="let item of countryList | search:filterForm.get('searchText').value:filterMetadata | slice:startCount:endCount ; let i=index">
+        <div class="tile count_tile">
+          <div class="flex_item">
+            <figure class="country_flag_container">
+              <img class="flag_image"
+                   [src]="item.flagImage">
+            </figure>
+            <h4>{{item.country}}</h4>
+          </div>
+          <div class="flex_item country_count_row">
+            <div class="country_count_item">
+              <h5>Cases</h5>
+              <span>{{item.cases | number}}</span>
+            </div>
+            <div class="country_count_item">
+              <h5>Deaths</h5>
+              <span>{{item.deaths | number}}</span>
+            </div>
+            <div class="country_count_item">
+              <h5>Recovered</h5>
+              <span>{{item.recovered | number}}</span>
+            </div>
+          </div>
+          <div class="flex_item country_count_row">
+            <div class="country_count_item">
+              <h5>Tests</h5>
+              <span>{{item.tests | number}}</span>
+            </div>
+            <div class="country_count_item">
+              <h5>Population</h5>
+              <span>{{item.population | number}}</span>
+            </div>
+            <a (click)="onCountryEdit(item.id)"
+               class="edit_icon">
+              <i class="fa fa-edit"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>

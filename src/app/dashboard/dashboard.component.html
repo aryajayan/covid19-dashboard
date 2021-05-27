@@ -1,0 +1,24 @@
+<div class="dashboard_container">
+  <nav class="left_nav_bar">
+    <a class="nav_item "
+       routerLink="/dashboard/total-dashboard"
+       routerLinkActive="active">
+      <i class="fa fa-dashboard fa-2x"
+         aria-hidden="true"></i>
+    </a>
+    <a class="nav_item"
+       routerLink="/dashboard/country-dashboard"
+       routerLinkActive="active">
+      <i class="fa fa-flag fa-2x"
+         aria-hidden="true"></i>
+    </a>
+    <a class="nav_item logout_icon"
+       (click)="onLogout()">
+      <i class="fa fa-power-off fa-2x"
+         aria-hidden="true"></i>
+    </a>
+  </nav>
+  <section class="right_section">
+    <router-outlet></router-outlet>
+  </section>
+</div>

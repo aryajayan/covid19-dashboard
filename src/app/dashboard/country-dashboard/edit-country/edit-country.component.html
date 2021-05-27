@@ -1,0 +1,65 @@
+<div class="country_dashboard_container dashboard_content">
+  <header class="header_section">
+    <h3 class="sub_header">Edit </h3>
+    <div class="border_line"></div>
+  </header>
+  <section class="form_section">
+    <form [formGroup]="countryForm">
+      <div class="form_data">
+
+        <div class="input_group">
+          <input type="number"
+                 class="input_text"
+                 formControlName="cases"
+                 (keydown)="validateNumber($event)"
+                 placeholder="Cases">
+          <span class="error_text"
+                *ngIf="showErrors && countryForm.get('cases').invalid">
+            Enter valid number of cases
+          </span>
+        </div>
+        <div class="input_group">
+          <input type="number"
+                 class="input_text"
+                 formControlName="deaths"
+                 (keydown)="validateNumber($event)"
+                 placeholder="Deaths">
+          <span class="error_text"
+                *ngIf="showErrors && countryForm.get('deaths').invalid">
+            Enter valid number of deaths
+          </span>
+        </div>
+
+        <div class="input_group">
+          <input type="number"
+                 class="input_text"
+                 formControlName="recovered"
+                 (keydown)="validateNumber($event)"
+                 placeholder="Recovered">
+          <span class="error_text"
+                *ngIf="showErrors && countryForm.get('recovered').invalid">
+            Enter valid number of recovered
+          </span>
+        </div>
+        <div class="input_group">
+          <input type="number"
+                 class="input_text"
+                 formControlName="tests"
+                 (keydown)="validateNumber($event)"
+                 placeholder="Tests">
+          <span class="error_text"
+                *ngIf="showErrors && countryForm.get('tests').invalid">
+            Enter valid number of tests
+          </span>
+        </div>
+
+      </div>
+      <div class="buttons">
+        <button class="button_white"
+                (click)="onCancelClick()">Cancel</button>
+        <button class="button_blue"
+                (click)="onSaveClick()">Save</button>
+      </div>
+    </form>
+  </section>
+</div>

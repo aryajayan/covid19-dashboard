@@ -1,0 +1,79 @@
+<div class="total_dashboard_container dashboard_content">
+  <section class="count_section">
+    <header class="header_section">
+      <h3 class="sub_header">Total</h3>
+      <div class="border_line"></div>
+    </header>
+    <div class="spinner align-center"
+         *ngIf="totalData==null">
+      <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="tile_container"
+         *ngIf="totalData!==null">
+      <div class="card_content">
+        <div class="tile count_tile">
+          <h4>Total Cases</h4>
+          <div class="count">
+            {{totalData.cases | number}}
+          </div>
+        </div>
+      </div>
+      <div class="card_content">
+        <div class="tile count_tile">
+          <h4>Total Deaths</h4>
+          <div class="count">
+            {{totalData.deaths | number}}
+          </div>
+        </div>
+      </div>
+      <div class="card_content ">
+        <div class="tile count_tile">
+          <h4>Total Recovered</h4>
+          <div class="count">
+            {{totalData.recovered | number}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="count_section">
+    <header class="header_section">
+      <h3 class="sub_header">Today</h3>
+      <div class="border_line"></div>
+    </header>
+    <div class="spinner align-center"
+         *ngIf="totalData==null">
+      <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="tile_container"
+         *ngIf="totalData!==null">
+      <div class="card_content">
+        <div class="tile count_tile">
+          <h4>Cases</h4>
+          <div class="count">
+            {{totalData.todayCases | number}}
+          </div>
+        </div>
+      </div>
+      <div class="card_content">
+        <div class="tile count_tile">
+          <h4>Deaths</h4>
+          <div class="count">
+            {{totalData.todayDeaths | number}}
+          </div>
+        </div>
+      </div>
+      <div class="card_content">
+        <div class="tile count_tile">
+          <h4>Recovered</h4>
+          <div class="count">
+            {{totalData.todayRecovered | number}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

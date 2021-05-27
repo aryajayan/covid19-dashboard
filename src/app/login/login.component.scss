@@ -1,0 +1,63 @@
+@import "src/sass/variables";
+@import "src/sass/mixins";
+
+.login_container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.banner_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form_section {
+  padding: 6em 10em;
+}
+.login_form {
+  height: 100%;
+}
+.login_section {
+  @include form-container;
+  @include form-box;
+}
+.button_container {
+  text-align: center;
+}
+
+.quarter-circle-top-left {
+  @include gradient(to bottom, $color-list);
+  width: 15em;
+  height: 15em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 15em 0;
+  -moz-border-radius: 0 0 15em 0;
+  -webkit-border-radius: 0 0 15em 0;
+}
+@media screen and (max-width: 1200px) {
+  .form_section {
+    padding: 4em !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contents {
+    width: 100%;
+  }
+  .login_container {
+    flex-direction: column !important;
+  }
+  .quarter-circle-top-left {
+    width: 10em;
+    height: 10em;
+    z-index: -1;
+  }
+  .form_section {
+    padding: 3em !important;
+    flex-grow: 1;
+  }
+  .login_section {
+    padding: 2em !important;
+  }
+}

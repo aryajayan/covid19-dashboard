@@ -1,0 +1,113 @@
+@import "../../../../sass/variables";
+@import "../../../../sass/mixins";
+.dashboard_content {
+  padding: 2em 3em;
+}
+
+.country_data_section {
+  flex-grow: 1;
+  overflow: auto;
+}
+.header_section {
+  align-items: stretch;
+}
+.text_box_section {
+  display: flex;
+  width: 70%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.fa-search {
+  position: absolute;
+  left: 2%;
+  top: 23%;
+  color: #ccc;
+}
+.inputContainer {
+  position: relative;
+  width: 30%;
+  margin-right: 1em;
+}
+.box_input {
+  width: 100%;
+  &.search_input {
+    padding-left: 2em;
+  }
+  &.sort_select {
+    padding: 0.47em;
+  }
+}
+.pagination_section {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  .page_count_span {
+    color: $text-grey;
+    font-size: $text-size;
+    width: 50%;
+  }
+}
+.navigation_section {
+  .fa {
+    font-size: 1.5vw;
+    margin: 0 0.5em;
+    color: blue;
+  }
+  .disabled_arrow {
+    color: $color-grey;
+  }
+}
+.tile_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card_content {
+  margin: 0.5em 0;
+}
+.count_tile {
+  @include flex-box(column);
+  padding: 0.6em;
+  width: 80%;
+  position: relative;
+}
+.edit_icon {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  .fa {
+    color: $base-color;
+  }
+}
+.flex_item {
+  @include flex-align(center, end);
+  width: 100%;
+  h4 {
+    flex-grow: 1;
+    padding: 0 1em;
+  }
+}
+.country_flag_container {
+  width: 5vw;
+  height: 3vw;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.country_count_row {
+  @include flex-box(row);
+}
+
+.country_count_item {
+  color: #000;
+  width: 33%;
+  padding: 0.4em 0;
+  h5 {
+    font-size: 1vw;
+    margin: 0;
+  }
+  span {
+    font-size: 1vw;
+  }
+}

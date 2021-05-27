@@ -38,7 +38,7 @@ form {
     padding: 0;
   }
   .form_data {
-    padding: 1em;
+    padding: 0.8em;
     flex-direction: column;
   }
   .input_group {
@@ -55,6 +55,7 @@ form {
       width: 45%;
       padding: 0.5em;
       margin-left: 0em;
+      font-size: 0.8em;
     }
   }
 }

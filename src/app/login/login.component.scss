@@ -38,7 +38,7 @@
 }
 @media screen and (max-width: 1200px) {
   .form_section {
-    padding: 4em !important;
+    padding: 4em;
   }
 }
 @media screen and (max-width: 800px) {
@@ -46,7 +46,7 @@
     width: 100%;
   }
   .login_container {
-    flex-direction: column !important;
+    flex-direction: column;
   }
   .quarter-circle-top-left {
     width: 10em;
@@ -54,10 +54,14 @@
     z-index: -1;
   }
   .form_section {
-    padding: 3em !important;
+    padding: 3em;
     flex-grow: 1;
   }
   .login_section {
-    padding: 2em !important;
+    padding: 2em;
+  }
+  .input_text,
+  .button_blue {
+    font-size: 0.8em;
   }
 }

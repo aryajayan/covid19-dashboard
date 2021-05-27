@@ -42,7 +42,7 @@ figure {
   @include form-button($base-color, $secondary-color, $base-color);
 }
 .button_white {
-  @include form-button($color-light, $text-grey, $color-light);
+  @include form-button($color-light, $text-grey, $text-grey);
 }
 .input_text {
   border: 0;

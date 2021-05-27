@@ -50,7 +50,7 @@
 }
 .navigation_section {
   .fa {
-    font-size: 1.5vw;
+    font-size: 1.4em;
     margin: 0 0.5em;
     color: blue;
   }
@@ -88,8 +88,8 @@
   }
 }
 .country_flag_container {
-  width: 5vw;
-  height: 3vw;
+  width: 4em;
+  height: 2.5em;
   img {
     width: 100%;
     height: 100%;
@@ -104,10 +104,97 @@
   width: 33%;
   padding: 0.4em 0;
   h5 {
-    font-size: 1vw;
+    font-size: 1em;
     margin: 0;
   }
   span {
-    font-size: 1vw;
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .country_count_item {
+    h5 {
+      font-size: 0.7em;
+    }
+    span {
+      font-size: 0.6em;
+    }
+  }
+  .pagination_section {
+    .page_count_span {
+      font-size: 0.7em;
+    }
+  }
+  .dashboard_content {
+    padding: 2em 2em;
+  }
+  .text_box_section {
+    width: 62%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .country_count_item {
+    h5 {
+      font-size: 1em;
+    }
+    span {
+      font-size: 1em;
+    }
+  }
+  .text_box_section {
+    width: 100%;
+  }
+  .inputContainer {
+    width: 46%;
+    margin: 0;
+  }
+  .text_box_section {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 480px) {
+  .country_count_item {
+    h5 {
+      font-size: 0.8em;
+    }
+    span {
+      font-size: 0.8em;
+    }
+  }
+  .country_data_section {
+    .count_tile {
+      width: 100%;
+      h4 {
+        font-size: 1em;
+      }
+    }
+  }
+  .country_flag_container {
+    width: 3em;
+    height: 2em;
+  }
+  .pagination_section {
+    padding: 0.5em 0 0.2em 0;
+    .page_count_span {
+      font-size: 0.7em;
+    }
+    .fa {
+      font-size: 1.1em;
+    }
+  }
+  .inputContainer {
+    width: 46%;
+    margin: 0;
+  }
+  .text_box_section {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .dashboard_content {
+    padding: 1em 2em;
+  }
+  .box_input {
+    font-size: 0.7em;
   }
 }

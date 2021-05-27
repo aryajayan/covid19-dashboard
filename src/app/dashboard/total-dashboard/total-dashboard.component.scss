@@ -19,3 +19,10 @@
   justify-content: center;
   text-align: center;
 }
+@media screen and (max-width: 800px) {
+  .tile_container {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

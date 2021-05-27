@@ -38,7 +38,6 @@
   @include box-border($base-color);
   color: $base-color;
   width: 85%;
-
   h4 {
     font-size: 1.5vw;
     font-family: "Cop_light";
@@ -71,17 +70,19 @@
     outline: #a5a5a5 auto 1px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 480px) {
   .dashboard_container {
     flex-direction: column;
   }
   .left_nav_bar {
     flex-direction: row;
+    padding: 0.5em 0 0 0;
   }
 
   .left_nav_bar {
     .fa {
-      font-size: 1em;
+      font-size: 1.2em;
+      margin: 0 0.2em;
     }
   }
   .nav_item {
@@ -120,40 +121,5 @@
   }
   .header_section {
     flex-direction: column;
-  }
-  .text_box_section {
-    width: 100%;
-  }
-  .inputContainer {
-    width: 50%;
-  }
-  .pagination_section {
-    padding: 0.3em;
-    .page_count_span {
-      font-size: 0.8em;
-    }
-    .fa {
-      font-size: 1.3em;
-    }
-  }
-  .country_data_section {
-    .count_tile {
-      width: 100%;
-      h4 {
-        font-size: 1.3em;
-      }
-    }
-  }
-  .country_count_item {
-    h5 {
-      font-size: 1em;
-    }
-    span {
-      font-size: 1em;
-    }
-  }
-  .country_flag_container {
-    width: 3em;
-    height: 2em;
   }
 }

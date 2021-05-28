@@ -304,11 +304,11 @@ class EditCountryComponent {
     }
 }
 EditCountryComponent.ɵfac = function EditCountryComponent_Factory(t) { return new (t || EditCountryComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_5__["Store"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"])); };
-EditCountryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: EditCountryComponent, selectors: [["app-edit-country"]], decls: 25, vars: 5, consts: [[1, "country_dashboard_container", "dashboard_content"], [1, "header_section"], [1, "sub_header"], [1, "border_line"], [1, "form_section"], [3, "formGroup"], [1, "form_data"], [1, "input_group"], ["type", "number", "formControlName", "cases", "placeholder", "Cases", 1, "input_text", 3, "keydown"], ["class", "error_text", 4, "ngIf"], ["type", "number", "formControlName", "deaths", "placeholder", "Deaths", 1, "input_text", 3, "keydown"], ["type", "number", "formControlName", "recovered", "placeholder", "Recovered", 1, "input_text", 3, "keydown"], ["type", "number", "formControlName", "tests", "placeholder", "Tests", 1, "input_text", 3, "keydown"], [1, "buttons"], [1, "button_white", 3, "click"], [1, "button_blue", 3, "click"], [1, "error_text"]], template: function EditCountryComponent_Template(rf, ctx) { if (rf & 1) {
+EditCountryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: EditCountryComponent, selectors: [["app-edit-country"]], decls: 25, vars: 6, consts: [[1, "country_dashboard_container", "dashboard_content"], [1, "header_section"], [1, "sub_header"], [1, "border_line"], [1, "form_section"], [3, "formGroup"], [1, "form_data"], [1, "input_group"], ["type", "number", "formControlName", "cases", "placeholder", "Cases", 1, "input_text", 3, "keydown"], ["class", "error_text", 4, "ngIf"], ["type", "number", "formControlName", "deaths", "placeholder", "Deaths", 1, "input_text", 3, "keydown"], ["type", "number", "formControlName", "recovered", "placeholder", "Recovered", 1, "input_text", 3, "keydown"], ["type", "number", "formControlName", "tests", "placeholder", "Tests", 1, "input_text", 3, "keydown"], [1, "buttons"], [1, "button_white", 3, "click"], [1, "button_blue", 3, "click"], [1, "error_text"]], template: function EditCountryComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](1, "header", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](2, "h3", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](3, "Edit ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](4, "div", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
@@ -354,7 +354,9 @@ EditCountryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdef
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"]("Edit ", ctx.countryDetails.country, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("formGroup", ctx.countryForm);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.showErrors && ctx.countryForm.get("cases").invalid);

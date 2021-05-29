@@ -17,6 +17,7 @@ export class TotalDashboardComponent implements OnInit, OnDestroy {
   constructor(private store: Store<fromApp.AppState>) {}
 
   ngOnInit(): void {
+    // get total case report from store
     this.subscription = this.store.select(selectTotalList).subscribe(
       (data) => {
         this.totalData = data;

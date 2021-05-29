@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
   }
 
+  // login click function
   onLogin() {
     let username = this.loginForm.get('username').value;
     let password = this.loginForm.get('password').value;

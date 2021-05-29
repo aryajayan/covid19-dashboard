@@ -1,8 +1,10 @@
 <section class="login_container">
+  <!-- left banner section -->
   <div class="banner_section contents">
     <div class="quarter-circle-top-left"></div>
     <h1>COVID - 19</h1>
   </div>
+  <!-- login form -->
   <div class="form_section contents">
     <form [formGroup]="loginForm"
           role="form"
@@ -18,9 +20,11 @@
                class="input_text"
                placeholder="password">
         <span *ngIf="errorMessage"
-              class="error_text">{{errorMessage}}</span>
+              class="error_text">{{errorMessage}}
+        </span>
         <button class="button_blue"
-                [disabled]="!loginForm.valid">Login</button>
+                [disabled]="!loginForm.valid">Login
+        </button>
       </div>
     </form>
   </div>

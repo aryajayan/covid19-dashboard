@@ -1,7 +1,9 @@
 <div class="country_dashboard_container dashboard_content">
+  <!-- header section with search and filter -->
   <header class="header_section"
           [formGroup]="filterForm">
     <h3 class="sub_header">Country</h3>
+    <!-- filter and search   -->
     <div class="text_box_section">
       <div class="inputContainer">
         <i class="fa fa fa-search"
@@ -20,6 +22,7 @@
         </select>
       </div>
     </div>
+    <!-- pagination next and previous contents -->
     <div class="pagination_section">
       <span class="page_count_span">{{startCount}} to {{filterMetadata.count>30 ? endDisplayCount:
         filterMetadata.count}} of {{filterMetadata.count}}</span>
@@ -35,15 +38,19 @@
       </div>
     </div>
   </header>
+  <!-- country listing  -->
   <section class="country_data_section"
            #tileContainer>
+
     <div class="spinner align-center"
          *ngIf="countryList==null">
       <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
       <span class="sr-only">Loading...</span>
     </div>
+
     <div class="tile_container"
          *ngIf="countryList!==null">
+      <!-- country item repeat-->
       <div class="card_content"
            *ngFor="let item of countryList | search:filterForm.get('searchText').value:filterMetadata | slice:startCount:endCount ; let i=index">
         <div class="tile count_tile">

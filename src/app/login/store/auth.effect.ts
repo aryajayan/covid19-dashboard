@@ -14,10 +14,10 @@ export class AuthEffect {
     this.actions$.pipe(
       ofType(AuthActions.LoginStart),
       map((authData) => {
-        if (authData.username == 'fingent' && authData.password == 'fingent') {
+        if (authData.username == 'admin' && authData.password == 'admin') {
           return AuthActions.AuthenticateSuccess({
             username: authData.username,
-            token: 'fingent123',
+            token: 'a@1dmin123',
           });
         } else {
           return AuthActions.AuthenticateFail({
